@@ -1,0 +1,41 @@
+.bg-global {
+  background-color: rgb(67, 9, 70) !important;
+  color: #fff !important;
+}
+
+/* INI cabecera */
+  .custom-nav {
+    height: 5rem;
+    background-color: rgb(67, 9, 70);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar-brand img {
+    height: 14rem; /* Ajusta la altura del logo si es necesario */
+    /*border: 1px red solid;*/
+  }
+  .navbar-nav {
+    flex-direction: row;
+  }
+  .navbar-nav .nav-item {
+    padding: 0 15px;
+  }
+
+  .img-logo {
+    background-color: rgb(67, 9, 70);
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* END cabecera */
+  
+  .footer-box {
+    background-color: rgb(67, 9, 70);
+  }
+
+  .card-banner {
+    border: none;
+  }
