@@ -39,3 +39,36 @@
   .card-banner {
     border: none;
   }
+
+  /* INI: tiping */
+  h1 {
+    display: block;
+    color: rgb(67, 9, 70);
+    font-family: 'Courier New', Courier, monospace;
+    white-space:nowrap;
+    border-right: 4px solid;
+    margin: auto;
+    text-align: center;
+    font-weight: 600;
+    
+
+    /* animation */
+    /*animation: typing 2s steps(phpini), blink .5s infinite step-end alternate;*/
+    overflow: hidden;
+   }
+   
+
+    @keyframes typing {
+    from { width: 0} 
+    }
+
+    @keyframes blink {
+    50% {border-color: transparent}
+    }
+
+    @media (max-width: 1250px) {
+      h1 {
+        font-size: 0.8rem;
+      }
+    }
+    /* END: tiping */
