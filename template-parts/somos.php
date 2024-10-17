@@ -3,15 +3,15 @@
   <div class="card text-center" style="border: none !important; background: transparent;">
       <div class="card-body" style="background: transparent; background: transparent; padding-block: 40px; padding-inline: 40px">
         <h5 class="card-title" style="color: rgb(9 227 217); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">QUE HACEMOS ?</h5>
-        <p class="card-text" style="color: #000f; font-family: 'Manrope';">
+        <p class="card-text" style="color: #fff; font-family:'Poppins'">
             Creamos <b>aplicaciones web a medida</b>, diseñadas para adaptarse a cualquier dispositivo y satisfacer las necesidades específicas de tu negocio.
         </p>
 
-        <h5 class="card-title mt-4" style="color: rgb(9 227 217); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">QUE TE BRINDAMOS?</h5>
-        <p>
+        <h5 class="card-title mt-4" style="color: rgb(9 227 217); font-family:'Poppins'">QUE TE BRINDAMOS?</h5>
+        <p style="color: #fff; font-family:'Poppins'">
             Ofrecemos soluciones únicas, con interfaces intuitivas y funcionalidades escalables, asegurando una experiencia optimizada y segura en todo momento.
         </p>
-        <p><b>¡Transforma tu idea en una plataforma web eficiente y de alto impacto!</b></p>
+        <p style="color: #fff; font-family:'Poppins'"><b>¡Transforma tu idea en una plataforma web eficiente y de alto impacto!</b></p>
       </div>
     </div>
   </div>

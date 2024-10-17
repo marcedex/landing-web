@@ -1,180 +1,251 @@
+.font-global {
+   font-family:'Poppins'
+}
+
 .bg-global {
   background-color: #250626 !important;
   color: #fff !important;
 }
 
 /* INI cabecera */
-  .custom-nav {
-    height: 5rem;
-    background-color: #000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+.custom-nav {
+  height: 5rem;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  /* ◈◈◈ LOGO ◈◈◈ */
-  .navbar-brand img {
-    height: 14rem; /* Ajusta la altura del logo si es necesario */
-  }
-  .navbar-nav {
-    flex-direction: row;
-  }
-  .navbar-nav .nav-item {
-    padding: 0 15px;
-  }
+/* ◈◈◈ LOGO ◈◈◈ */
+.navbar-brand img {
+  height: 14rem;
+  /* Ajusta la altura del logo si es necesario */
+}
 
-  /* ≣≣≣≣≣≣≣ MENU NAV ≣≣≣≣≣≣≣≣ */
-  .nav-item .nav-link {
-    color: #66c6cb;
-    font-weight: 600;
+.navbar-nav {
+  flex-direction: row;
+}
+
+.navbar-nav .nav-item {
+  padding: 0 15px;
+}
+
+/* ≣≣≣≣≣≣≣ MENU NAV ≣≣≣≣≣≣≣≣ */
+.nav-item .nav-link {
+  color: #66c6cb;
+  font-weight: 600;
+}
+
+.nav-link.active,
+.show>.nav-link {
+  background-color: #250626 !important;
+  color: #f600ff !important;
+  box-shadow: 0 0 5px 03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.btn-consulta-home {
+  font-size: 1.3rem;
+  width: 12rem !important;
+  height: 3rem;
+  background-color: rgb(67, 9, 70);
+  color: #f600ff;
+  font-family: 'Poppins';
+  font-weight: bold;
+  border: none;
+}
+
+.espejo-btn:hover {
+  background-color: rgb(11, 244, 244);
+  color: #f600ff;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.img-logo {
+  background-color: #250626;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ▦▦▦▦▦▦ BANNERS ▦▦▦▦▦▦ */
+
+.banner-box-content {
+  box-shadow: 10px 10px 20px #bd22f8, -10px -10px 20px rgb(0 167 165);
+}
+
+.card-banner {
+  border: none;
+}
+
+.card-title {
+  font-family: 'Poppins';
+  font-size: 2rem;
+  color: #62ccce;
+}
+
+.card-text {
+  font-family: 'Poppins';
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 400;
+  color: rgb(169 0 255);
+}
+
+.line-logo {
+  width: 50%;
+  height: 1px;
+  background: linear-gradient(to right, rgb(169, 0, 255), #0302f0, rgb(255, 0, 132));
+  margin: auto;
+}
+
+/* INI: tiping */
+.text-typing {
+  display: block;
+  color: rgb(169 0 255);
+  font-family: 'Poppins';
+  white-space: nowrap;
+  border-right: 4px solid;
+  margin: auto;
+  text-align: center;
+  font-weight: 600;
+
+  /* animation */
+  animation: typing 2s steps(phpini), blink .5s infinite step-end alternate;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from {
+    width: 0
   }
+}
 
-  .nav-link.active,
-  .show > .nav-link {
-    background-color: #250626 !important;
-    color: #f600ff !important;
-    box-shadow: 0 0 5px 03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
-    -webkit-box-reflect: below 1px
-    linear-gradient(transparent, #0005);
+@keyframes blink {
+  50% {
+    border-color: transparent
   }
+}
 
-  .btn-consulta-home {
-    font-size: 1.3rem;
-    width: 12rem !important;
-    height: 3rem;
-    background-color: rgb(67, 9, 70);
-    color: #f600ff;
-    font-family: monospace;
-    font-weight: bold;
-    border: none;
-  }
-
-  .espejo-btn:hover {
-    background-color: rgb(11, 244, 244);
-    color: #f600ff;
-    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
-    -webkit-box-reflect: below 1px
-    linear-gradient(transparent, #0005);
-  }
-
-  .img-logo {
-    background-color: #250626;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-
-  /* ▦▦▦▦▦▦ BANNERS ▦▦▦▦▦▦ */
-
-  .banner-box-content {
-    box-shadow: 10px 10px 20px #bd22f8, -10px -10px 20px rgb(0 167 165);
-  }
-
-  .card-banner {
-    border: none;
-  }
-
-  .card-title {
-    font-family: ClashGrotesk, sans-serif;
-    font-size: 2rem;
-    color: #62ccce;
-  }
-
-  .card-text {
-    font-family: cursive;
-    font-size: 20px;
-    line-height: 150%;
-    font-weight: 400;
-    color: rgb(169 0 255);
-  }
-
-  .line-logo {
-    width: 50%;
-    height: 1px;
-    background: linear-gradient(to right, rgb(169, 0, 255), #0302f0, rgb(255, 0, 132));
-    margin: auto;
-  }
-  
-  /* INI: tiping */
+@media (max-width: 1250px) {
   .text-typing {
-    display: block;
-    color: rgb(169 0 255);
-    font-family: 'Courier New', Courier, monospace;
-    white-space:nowrap;
-    border-right: 4px solid;
-    margin: auto;
-    text-align: center;
-    font-weight: 600;
-    
-    /* animation */
-    animation: typing 2s steps(phpini), blink .5s infinite step-end alternate;
-    overflow: hidden;
-   }
-   
-    @keyframes typing {
-    from { width: 0} 
-    }
-
-    @keyframes blink {
-    50% {border-color: transparent}
-    }
-
-    @media (max-width: 1250px) {
-      .text-typing {
-        font-size: 1rem;
-      }
-    }
-    /* END: tiping */
-
-
-    /* ⫸⫸⫸⫸⫸ OFERTA ⫸⫸⫸⫸⫸ */
-        .skills-cards .row .card {
-        text-align: center;
-        height: 100%;
-        border: none;
-        background: linear-gradient(to right, rgb(169, 0, 255), #0302f0, rgb(255, 0, 132));
-    }
-   .skills-cards .row .card .card-body .card-title {
-        font-family: sans-serif;
-        font-size: 2rem;
-        color: #62ccce;
-        
-   }
-
-   .skills-cards .row .card .card-body .card-img-top {
-    width: 5rem;
-    margin-block: 1rem;
-   }
-
-   .skills-cards .row .card .card-body .card-text {
-        font-family: fangsong;
-        font-size: 20px;
-        line-height: 150%;
-        font-weight: 400;
-        color: #fff;
-    }
-
-    .skills-cards .row .card .card-body .btn-primary {
-        background-color: rgb(67, 9, 70);
-        border: none;
-        font-weight: bold;
-    }
-
-    /* btn hover espejo */
-    .skills-cards .row .card .card-body .btn-primary:hover {
-        background-color: rgb(11, 244, 244);
-        color: #f600ff;
-        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
-        -webkit-box-reflect: below 1px
-        linear-gradient(transparent, #0005);
-    }
-
-
-  /* ▥▥▥▥▥▥  FOOTER ▥▥▥▥▥ */
-
-  .footer-box {
-    background-color: rgb(67, 9, 70);
+    font-size: 1rem;
   }
+}
+
+/* END: tiping */
+
+
+/* ⫸⫸⫸⫸⫸ OFERTA ⫸⫸⫸⫸⫸ */
+.skills-cards .row .card {
+  text-align: center;
+  height: 100%;
+  border: none;
+  background: linear-gradient(to right, rgb(169, 0, 255), #0302f0, rgb(255, 0, 132));
+}
+
+.skills-cards .row .card .card-body .card-title {
+  font-family: 'Poppins';
+  font-size: 2rem;
+  color: #62ccce;
+
+}
+
+.skills-cards .row .card .card-body .card-img-top {
+  width: 5rem;
+  margin-block: 1rem;
+}
+
+.skills-cards .row .card .card-body .card-text {
+  font-family: 'Poppins';
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 400;
+  color: #fff;
+}
+
+.skills-cards .row .card .card-body .btn-primary {
+  background-color: rgb(67, 9, 70);
+  border: none;
+  font-weight: bold;
+}
+
+/* btn hover espejo */
+.skills-cards .row .card .card-body .btn-primary:hover {
+  background-color: rgb(11, 244, 244);
+  color: #f600ff;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+/* end */
+
+/* ※※※※※※ Sección "Te Ofrecesomos" ※※※※※※ */
+
+.title-section {
+  font-family: "Poppins";
+  color: #f403d9;
+  font-weight: bold;
+  filter: drop-shadow(2px 4px 6px black);
+  font-size: 2.5rem;
+}
+
+.skills-cards .row .card {
+  text-align: center;
+  height: 100%;
+  border: none;
+  background: linear-gradient(to right, rgb(169, 0, 255), #0302f0, rgb(255, 0, 132));
+}
+.skills-cards .row .card .card-body .card-title {
+font-family: "Poppins";
+  font-size: 2rem;
+  color: #62ccce;
+  filter: drop-shadow(2px 4px 6px black);
+  
+}
+
+.skills-cards .row .card .card-body .card-img-top {
+width: 5rem;
+margin-block: 1rem;
+}
+
+.skills-cards .row .card .card-body .card-text {
+font-family: "Poppins";
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 400;
+  color: #fff;
+}
+
+.skills-cards .row .card .card-body .collapse {
+  margin-top: 20px;
+  color: #fff;
+  border: 1px solid #03e9f4;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.skills-cards .row .card .card-body .btn-primary {
+  font-family: "Poppins";
+  background-color: rgb(67, 9, 70);
+  border: none;
+  font-weight: bold;
+}
+
+/* btn hover espejo */
+.skills-cards .row .card .card-body .btn-primary:hover {
+  background-color: rgb(11, 244, 244);
+  color: #f600ff;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+  -webkit-box-reflect: below 1px
+  linear-gradient(transparent, #0005);
+}
+
+/* ▥▥▥▥▥▥  FOOTER ▥▥▥▥▥ */
+
+.footer-box {
+  background-color: rgb(67, 9, 70);
+}

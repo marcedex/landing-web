@@ -1,3 +1,4 @@
+<?php include_once 'functions.php' ?>
 <!doctype html>
 <html lang="es">
     <?php include_once 'template-parts/head.php' ?>
@@ -5,7 +6,7 @@
     <?php include_once 'template-parts/header.php' ?>
     <?php include_once 'template-parts/tu_consulta.php' ?>
     <?php include_once 'template-parts/somos.php' ?>
-    <?php include_once 'template-parts/banner.php' ?>
+    <?php include_once 'template-parts/banners.php' ?>
     <?php include_once 'template-parts/ofrecemos.php' ?>
     <?php include_once 'template-parts/contacto.php' ?>
     <?php include_once 'template-parts/footer.php' ?>

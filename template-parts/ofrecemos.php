@@ -1,66 +1,9 @@
-<style type="text/css">
-    .title-section {
-        color: #f403d9;
-        font-weight: bold;
-        filter: drop-shadow(2px 4px 6px black);
-    }
-
-    .skills-cards .row .card {
-        text-align: center;
-        height: 100%;
-        border: none;
-        background: linear-gradient(to right, rgb(169, 0, 255), #0302f0, rgb(255, 0, 132));
-    }
-   .skills-cards .row .card .card-body .card-title {
-        font-family: sans-serif;
-        font-size: 2rem;
-        color: #62ccce;
-        filter: drop-shadow(2px 4px 6px black);
-        
-   }
-
-   .skills-cards .row .card .card-body .card-img-top {
-    width: 5rem;
-    margin-block: 1rem;
-   }
-
-   .skills-cards .row .card .card-body .card-text {
-        font-family: fangsong;
-        font-size: 20px;
-        line-height: 150%;
-        font-weight: 400;
-        color: #fff;
-    }
-
-    .skills-cards .row .card .card-body .collapse {
-        margin-top: 20px;
-        color: #fff;
-        border: 1px solid #03e9f4;
-        backdrop-filter: blur(15px);
-        background: rgba(255, 255, 255, 0.2);
-    }
-
-    .skills-cards .row .card .card-body .btn-primary {
-        background-color: rgb(67, 9, 70);
-        border: none;
-        font-weight: bold;
-    }
-
-    /* btn hover espejo */
-    .skills-cards .row .card .card-body .btn-primary:hover {
-        background-color: rgb(11, 244, 244);
-        color: #f600ff;
-        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
-        -webkit-box-reflect: below 1px
-        linear-gradient(transparent, #0005);
-    }
-</style>
 <div class="container my-5 skills-cards">
     <div class="row">
-        <div id="servicios" class="text-center mt-5 mb-4 title-section">
-            <h2>NUESTROS SERVICIOS</h2>
+        <div id="servicios" class="text-center mt-5 mb-4">
+            <h2 class="title-section">Te ofrecemos nuestros SERVICIOS</h2>
         </div>
-        <div class="col-sm-6 my-4">
+        <div class="col-12 col-md-6 my-4">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Dominio y Hosting</h5>
@@ -83,7 +26,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 my-4">
+        <div class="col-12 col-md-6 my-4">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Desarrollo Web a Medida</h5>
@@ -104,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 my-4">
+        <div class="col-12 col-md-6 my-4">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Diseño y Estilo Único</h5>
@@ -125,7 +68,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 my-4">
+        <div class="col-12 col-md-6 my-4">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Optimización Responsive</h5>
@@ -146,7 +89,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 my-4">
+        <div class="col-12 col-md-6 my-4">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Asesoría y Soporte Constante</h5>
@@ -169,7 +112,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 my-4">
+        <div class="col-12 col-md-6 my-4">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Integración de Métodos de Comunicación</h5>
@@ -190,7 +133,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 my-4">
+        <div class="col-12 col-md-6 my-4">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Soporte de Servidor</h5>
