@@ -20,7 +20,6 @@
     </main>
     
     <?php include_once 'template-parts/footer.php' ?>
-    <script src="./bootstrap/js/bootstrap.min.js"></script>
     <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
