@@ -1,114 +1,30 @@
-<!-- test @borrar -->
-<style type="text/css">
-   header{
-    background-color: #222;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: .5rem 2rem;
-}
-.logo-header img{
-    width: 50px;
-}
-.nav-menu ul{
-    display: flex;
-    align-items: center;
-}
-.nav-menu li{
-    margin-right: 1rem;
-}
-.nav-menu a{
-    color: #fff;
-}
-.nav-menu li:last-child{
-    background:#4ad295;
-    padding: .25rem .75rem;
-    border-radius: .2rem;
-}
-.menu-icon img{
-    width: 30px;
-    height: 30px;
-    border-radius: 2px;
-}
-.menu-icon, #check{
-    display: none;
-}
-
-@media (max-width:768px){
-    .checkbtn{
-        display: block;
-    }
-    .menu-icon{
-        display: block;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        cursor: pointer;
-    }
-    .nav-menu ul{
-        display: block;
-        position: fixed;
-        top:70px;
-        left:-100%;
-        background: #222;
-        width: 100%;
-        height: 100vh;
-        right: 0;
-    }
-    .nav-menu ul li{
-        padding: 2rem;
-        display: flex;
-        justify-content: center;
-        margin: 0;
-    }
-    .nav-menu ul li:last-child{
-        background: none;
-        padding: 1rem;
-    }
-    #check:checked ~ ul{
-        left: 0;
-        transition: all .25s;
-    }
-}
-</style>
-
-<!-- Logo centrado -->
-<div class="img-logo">
-    <a class="navbar-brand" href="#">
-        <div>
-            <img src="./img/new/logo-box.jpg" alt="Logo">
-        </div>
+<!-- Header Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-glass fixed-top w-100" style="z-index: 1030;">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="./img/new/logo-transp.png" alt="Landing Web Logo" class="me-2" style="height: 40px;">
+      <span class="ms-1" style="font-size: 1.5rem; letter-spacing: 1px;">Landing<span style="color: var(--secondary)">Web</span></span>
     </a>
-</div>
-
-<?php
-
-include 'template-parts/nav.php';
-
-
-
-#$texto = 'Soluciones y Diseño Digital';
-#texto = 'Qué buscas para tu Sitio Web ? ';
-$texto1 = 'Obtené Tu Página ya!';
-$texto2 = null;
-
-$cont = strlen($texto1);
-#$cont2 = strlen($texto2);
-?>
-<div class="container-fluid">
-    <div class="alert my-3" role="alert">
-        <h2 class="text-typing" style="width: <?php echo $cont + 0.5; ?>ch; animation: typing 2s steps(<?php echo $cont; ?>), blink .5s infinite step-end alternate;">
-            <?php
-            echo $texto1;
-            ?>
-        </h2>
-        <?php if ($texto2): ?>
-            <h2 class="text-typing" style="width: <?php echo $cont2 + 0.5; ?>ch; animation: typing 2s steps(<?php echo $cont2; ?>);">
-                <?php
-                echo $texto2;
-                ?>
-            </h2>
-        <?php endif; ?>
+    
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-center">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#nosotros">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#servicios">Servicios</a>
+        </li>
+        <li class="nav-item ms-lg-4 mt-3 mt-lg-0">
+          <a class="btn-modern" href="#contacto">Contacto</a>
+        </li>
+      </ul>
     </div>
-</div>
+  </div>
+</nav>

@@ -1,121 +1,311 @@
-.font-global {
-   font-family:'Poppins'
+/* 1. Base Variables & Typography */
+:root {
+  --primary: #8a2be2;
+  --secondary: #03e9f4;
+  --tertiary: #ff007f;
+  --dark-bg: #0a0a0a;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-light: #f0f0f0;
+  --text-muted: #a0a0a0;
+
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
 
-.bg-global {
-  background-color: #250626 !important;
-  color: #fff !important;
+body {
+  font-family: var(--font-body);
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-/* INI cabecera */
-.custom-nav {
-  height: 5rem;
-  background-color: #000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
 }
 
-/* ◈◈◈ LOGO ◈◈◈ */
+/* Base utilities */
+.text-gradient {
+  background: linear-gradient(90deg, var(--secondary), var(--primary), var(--tertiary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-panel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(138, 43, 226, 0.2);
+  border-color: rgba(3, 233, 244, 0.3);
+}
+
+/* Buttons */
+.btn-modern {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(45deg, var(--primary), var(--tertiary));
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--secondary), var(--primary));
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.btn-modern:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(3, 233, 244, 0.5);
+}
+
+.btn-modern:hover::before {
+  opacity: 1;
+}
+
+/* 2. Navigation */
+.navbar-glass {
+  background: rgba(10, 10, 10, 0.8) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-glass .nav-link {
+  color: var(--text-light);
+  font-family: var(--font-heading);
+  font-weight: 500;
+  margin: 0 0.5rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-glass .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--secondary);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-glass .nav-link:hover,
+.navbar-glass .nav-link.active {
+  color: var(--secondary);
+}
+
+.navbar-glass .nav-link:hover::after,
+.navbar-glass .nav-link.active::after {
+  width: 100%;
+}
+
 .navbar-brand img {
-  height: 14rem;
-  /* Ajusta la altura del logo si es necesario */
+  height: 50px;
+  object-fit: contain;
 }
 
-.navbar-nav {
-  flex-direction: row;
-}
-
-.navbar-nav .nav-item {
-  padding: 0 15px;
-}
-
-/* ≣≣≣≣≣≣≣ MENU NAV ≣≣≣≣≣≣≣≣ */
-.nav-item .nav-link {
-  color: #66c6cb;
-  font-weight: 600;
-}
-
-.nav-link.active,
-.show>.nav-link {
-  background-color: #250626 !important;
-  color: #f600ff !important;
-  box-shadow: 0 0 5px 03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-}
-
-.btn-consulta-home {
-  font-size: 1.3rem;
-  width: 12rem !important;
-  height: 3rem;
-  background-color: rgb(67, 9, 70);
-  color: #f600ff;
-  font-family: 'Poppins';
-  font-weight: bold;
-  border: none;
-}
-
-.espejo-btn:hover {
-  background-color: rgb(11, 244, 244);
-  color: #f600ff;
-  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-}
-
-.img-logo {
-  background-color: #250626;
-  height: 300px;
+/* 3. Hero / Banners */
+.hero-section {
+  min-height: 80vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  position: relative;
+  padding: 100px 0 50px;
+  background: radial-gradient(circle at top right, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at bottom left, rgba(3, 233, 244, 0.1) 0%, transparent 50%);
 }
 
-
-/* ▦▦▦▦▦▦ BANNERS ▦▦▦▦▦▦ */
-
-.banner-box-content {
-  box-shadow: 10px 10px 20px #bd22f8, -10px -10px 20px rgb(0 167 165);
+.hero-title {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
 }
 
-.card-banner {
-  border: none;
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  max-width: 600px;
 }
 
-.card-title {
-  font-family: 'Poppins';
-  font-size: 2rem;
-  color: #62ccce;
+.hero-img-container {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
-.card-text {
-  font-family: 'Poppins';
-  font-size: 20px;
-  line-height: 150%;
-  font-weight: 400;
-  color: rgb(169 0 255);
+/* 4. Sections General */
+.section-padding {
+  padding: 100px 0;
 }
 
-.line-logo {
-  width: 50%;
-  height: 1px;
-  background: linear-gradient(to right, rgb(169, 0, 255), #0302f0, rgb(255, 0, 132));
-  margin: auto;
-}
-
-/* INI: tiping */
-.text-typing {
-  display: block;
-  color: rgb(169 0 255);
-  font-family: 'Poppins';
-  white-space: nowrap;
-  border-right: 4px solid;
-  margin: auto;
+.section-title {
   text-align: center;
-  font-weight: 600;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+}
 
-  /* animation */
-  animation: typing 2s steps(phpini), blink .5s infinite step-end alternate;
+/* 5. Services Cards */
+.service-icon {
+  font-size: 3rem;
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  background: linear-gradient(45deg, var(--secondary), var(--primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.service-card {
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* 6. Forms */
+.custom-form .form-control {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #fff;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.custom-form .form-control:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 0.25rem rgba(3, 233, 244, 0.25);
+  color: #fff;
+}
+
+.custom-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.custom-form label {
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* 7. Footer */
+.footer {
+  background: #050505;
+  border-top: 1px solid var(--glass-border);
+  padding: 50px 0 20px;
+}
+
+.footer-content {
+  margin-bottom: 3rem;
+}
+
+.footer-logo img {
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--secondary);
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--glass-bg);
+  color: #fff;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  background: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Typing effect */
+.text-typing {
+  display: inline-block;
+  white-space: nowrap;
+  border-right: 4px solid var(--secondary);
+  animation: typing 2.5s steps(30, end), blink-caret .75s step-end infinite;
   overflow: hidden;
 }
 
@@ -123,129 +313,26 @@
   from {
     width: 0
   }
+
+  to {
+    width: 100%
+  }
 }
 
-@keyframes blink {
-  50% {
+@keyframes blink-caret {
+
+  from,
+  to {
     border-color: transparent
   }
-}
 
-@media (max-width: 1250px) {
-  .text-typing {
-    font-size: 1rem;
+  50% {
+    border-color: var(--secondary)
   }
 }
 
-/* END: tiping */
-
-
-/* ⫸⫸⫸⫸⫸ OFERTA ⫸⫸⫸⫸⫸ */
-.skills-cards .row .card {
-  text-align: center;
-  height: 100%;
-  border: none;
-  background: linear-gradient(to right, rgb(169, 0, 255), #0302f0, rgb(255, 0, 132));
-}
-
-.skills-cards .row .card .card-body .card-title {
-  font-family: 'Poppins';
-  font-size: 2rem;
-  color: #62ccce;
-
-}
-
-.skills-cards .row .card .card-body .card-img-top {
-  width: 5rem;
-  margin-block: 1rem;
-}
-
-.skills-cards .row .card .card-body .card-text {
-  font-family: 'Poppins';
-  font-size: 20px;
-  line-height: 150%;
-  font-weight: 400;
-  color: #fff;
-}
-
-.skills-cards .row .card .card-body .btn-primary {
-  background-color: rgb(67, 9, 70);
-  border: none;
-  font-weight: bold;
-}
-
-/* btn hover espejo */
-.skills-cards .row .card .card-body .btn-primary:hover {
-  background-color: rgb(11, 244, 244);
-  color: #f600ff;
-  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-}
-/* end */
-
-/* ※※※※※※ Sección "Te Ofrecesomos" ※※※※※※ */
-
-.title-section {
-  font-family: "Poppins";
-  color: #f403d9;
-  font-weight: bold;
-  filter: drop-shadow(2px 4px 6px black);
-  font-size: 2.5rem;
-}
-
-.skills-cards .row .card {
-  text-align: center;
-  height: 100%;
-  border: none;
-  background: linear-gradient(to right, rgb(169, 0, 255), #0302f0, rgb(255, 0, 132));
-}
-.skills-cards .row .card .card-body .card-title {
-font-family: "Poppins";
-  font-size: 2rem;
-  color: #62ccce;
-  filter: drop-shadow(2px 4px 6px black);
-  
-}
-
-.skills-cards .row .card .card-body .card-img-top {
-width: 5rem;
-margin-block: 1rem;
-}
-
-.skills-cards .row .card .card-body .card-text {
-font-family: "Poppins";
-  font-size: 20px;
-  line-height: 150%;
-  font-weight: 400;
-  color: #fff;
-}
-
-.skills-cards .row .card .card-body .collapse {
-  margin-top: 20px;
-  color: #fff;
-  border: 1px solid #03e9f4;
-  backdrop-filter: blur(15px);
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.skills-cards .row .card .card-body .btn-primary {
-  font-family: "Poppins";
-  background-color: rgb(67, 9, 70);
-  border: none;
-  font-weight: bold;
-}
-
-/* btn hover espejo */
-.skills-cards .row .card .card-body .btn-primary:hover {
-  background-color: rgb(11, 244, 244);
-  color: #f600ff;
-  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
-  -webkit-box-reflect: below 1px
-  linear-gradient(transparent, #0005);
-}
-
-/* ▥▥▥▥▥▥  FOOTER ▥▥▥▥▥ */
-
-.footer-box {
-  background-color: rgb(67, 9, 70);
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
 }
