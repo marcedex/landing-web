@@ -8,24 +8,17 @@ require '../phpmailer/src/SMTP.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Sanitizar y recoger los datos del formulario
-    $nombre = filter_var($_POST['nombre'], FILTER_SANITIZE_STRING);
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $mensaje = filter_var($_POST['mensaje'], FILTER_SANITIZE_STRING);
+    $nombre = htmlspecialchars(strip_tags($_POST['nombre'] ?? ''));
+    $email = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);
+    $mensaje = htmlspecialchars(strip_tags($_POST['mensaje'] ?? ''));
 
     if (empty($nombre) || empty($email) || empty($mensaje) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header("Location: ../index.php?status=error&message=" . urlencode("Por favor, completa todos los campos correctamente."));
+        $query = http_build_query(['nombre' => $nombre, 'email' => $email, 'mensaje' => $mensaje]);
+        header("Location: ../error.php?" . $query);
         exit;
     }
 
-    // Set default redirect URL
-    $redirect_url = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '../index.php';
-
-    // Remove any existing status or message query parameters
-    $redirect_url = preg_replace('/([?&])(status|message)=[^&]*&?/', '$1', $redirect_url);
-    $redirect_url = rtrim($redirect_url, '?&');
-    
-    // Add separator
-    $separator = (parse_url($redirect_url, PHP_URL_QUERY) == NULL) ? '?' : '&';
+    $mail = new PHPMailer(true);
 
     try {
         // Configuraciones del servidor 
@@ -60,17 +53,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->send();
         
         // Redirigir al usuario con un mensaje de éxito
-        header("Location: {$redirect_url}{$separator}status=success");
+        header("Location: ../gracias.php");
         exit;
     } catch (Exception $e) {
         // Redirigir al usuario con un mensaje de error
-        header("Location: {$redirect_url}{$separator}status=error&message=" . urlencode("El mensaje no pudo ser enviado. Mailer Error: {$mail->ErrorInfo}"));
+        $query = http_build_query(['nombre' => $nombre, 'email' => $email, 'mensaje' => $mensaje]);
+        header("Location: ../error.php?" . $query);
         exit;
     }
 } else {
     // Si no es POST, redirigir al listado anterior
-    $redirect_url = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '../index.php';
-    header("Location: {$redirect_url}");
+    header("Location: ../index.php");
     exit;
 }
 ?>
