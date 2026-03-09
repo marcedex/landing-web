@@ -8,11 +8,6 @@
                     <span class="ms-2 fs-4 font-heading fw-bold">Landing<span style="color: var(--secondary)">Web</span></span>
                 </div>
                 <p class="text-muted pe-md-5">Somos expertos en desarrollo web a medida. Potenciamos tu marca en el mundo digital con diseños modernos, eficientes y persuasivos.</p>
-                <div class="footer-social mt-4">
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
             </div>
             
             <div class="col-md-3 mb-4 mb-md-0">
