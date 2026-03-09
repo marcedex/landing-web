@@ -8,7 +8,7 @@
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-6 mb-5 mb-lg-0">
                 <div class="glass-panel p-4 p-md-5 mx-auto" style="max-width: 500px;">
-                    <form class="custom-form" action="#" method="POST">
+                    <form class="custom-form" action="fomrs/procesar_contacto.php" method="POST">
                         <h4 class="text-white font-heading mb-4 border-bottom border-secondary pb-2">Envianos tu consulta</h4>
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre Completo</label>

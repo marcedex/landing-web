@@ -46,3 +46,15 @@
 <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
+<?php if (isset($_GET['status'])): ?>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        <?php if ($_GET['status'] == 'success'): ?>
+            alert("Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto a la brevedad.");
+        <?php elseif ($_GET['status'] == 'error'): ?>
+            alert("<?php echo isset($_GET['message']) ? htmlspecialchars($_GET['message']) : 'Hubo un error al enviar el mensaje. Inténtalo de nuevo.'; ?>");
+        <?php endif; ?>
+    });
+</script>
+<?php endif; ?>
