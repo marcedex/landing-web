@@ -1,5 +1,4 @@
 <?php include 'template-parts/head.php'; ?>
-<?php include 'template-parts/nav.php'; ?>
 
 <section class="section-padding position-relative d-flex align-items-center justify-content-center" style="min-height: 80vh;">
     <div class="container text-center">

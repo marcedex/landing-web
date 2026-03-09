@@ -1,5 +1,4 @@
 <?php include 'template-parts/head.php'; ?>
-<?php include 'template-parts/nav.php'; ?>
 
 <?php
 $nombre = isset($_GET['nombre']) ? $_GET['nombre'] : '';
